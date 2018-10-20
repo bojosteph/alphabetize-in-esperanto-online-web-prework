@@ -1,14 +1,12 @@
 ESPERANTO_ALPHABET = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
 
 def alphabetize(arr)
-  # code here
-   
-  arr.sort_by! do |x|
-     alphabets = []
-    x.each_char do |y|
-      alphabets.push(ESPERANTO_ALPHABET.index(char))
+  arr.sort_by! do |a|
+    positions = []
+    a.each_char do |char|
+      positions << ESPERANTO_ALPHABET.index(char)
     end
-    alphabets
+    positions
   end
   arr
 end
